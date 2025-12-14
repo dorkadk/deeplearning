@@ -1,0 +1,12 @@
+# Alapvető Deep Learning csomagok
+numpy
+pandas
+matplotlib
+scikit-learn
+
+torch
+torchvision
+torchaudio
+
+ipython
+tqdm
