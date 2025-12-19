@@ -6,7 +6,7 @@ ENV PYTHONUNBUFFERED=1
 WORKDIR /app
 
 # <-- 3) System deps (ha szükséges pl. Git, build tools)
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y dos2unix\
     git \
  && rm -rf /var/lib/apt/lists/*
 
@@ -17,6 +17,8 @@ RUN pip install --upgrade pip \
 
 
 COPY src ./src
+COPY run.sh ./run.sh
+RUN dos2unix /app/run.sh && chmod +x / app/run.sh
 
 # <-- 6) Default parancs
 # Indítsa el a fő Python scriptet

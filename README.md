@@ -32,3 +32,4 @@ Run the following command in the root directory of the repository to build the D
 ```bash
 docker build -t dl-project .
 docker run -v $(pwd)/data:/app/data dl-project > log/run.log 2>&1
+
